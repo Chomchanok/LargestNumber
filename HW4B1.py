@@ -1,4 +1,4 @@
-list = [10,1]
+list = [50,2,1,9]
 def split(list):
    spd= []
    for i in range(len(list)):
@@ -16,36 +16,21 @@ def SortNum(spd):
             
             if spd[i] > spd[idx]:
                 spd[i],spd[idx] = spd[idx],spd[i] 
+    arrayConcat = []
+    stringC = ""
+
+    for i in spd: 
+    
+        for j in i:
+            arrayConcat.append(str(j))
             
+    for i in arrayConcat:
+         stringC = stringC + i 
+
+    print(stringC)      
                 
-    print(spd)
+   
+
+        
         
 SortNum(split(list))
-'''
-#z = int(str(9) + str(8))
-#print(z)
-
-list2 = [121, 1, 2, 50]
-[50,2,1,9]
-
-    
-array1 = []
-
-
-for i,word in enumerate(list2):
-    
-    moveWord = list2[i + 1]
-    
-    word = str(word)
-    word = int(word[0])
-'''    
-    
-       
-    
- 
-
-
-
-
-
-
