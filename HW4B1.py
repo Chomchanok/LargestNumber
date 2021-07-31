@@ -1,36 +1,26 @@
-list = [50,2,1,9]
-def split(list):
-   spd= []
-   for i in range(len(list)):
-       newlist = [int(a) for a in str(list[i])]
-      
-       spd.append(newlist)
-   return spd
-
-def SortNum(spd):
-    
-# Swap the elements to arrange in order
-    for i in range(len(spd)):
-        
-        for idx in range(i):
-            
-            if spd[i] > spd[idx]:
-                spd[i],spd[idx] = spd[idx],spd[i] 
+import itertools 
+  
+listA =  [10,1]##[121, 1, 2, 50]#[50,1,2,9]
+perm = itertools.permutations(listA) 
+newlist = [] 
+for i in list(perm): 
     arrayConcat = []
     stringC = ""
-
-    for i in spd: 
-    
-        for j in i:
-            arrayConcat.append(str(j))
-            
+    #print(i)
+    for j in i:
+        arrayConcat.append(str(j))
+    #print(j)
     for i in arrayConcat:
-         stringC = stringC + i 
-
-    print(stringC)      
+        stringC += i 
+    #print(stringC)
+      
+    for i in stringC:
+        newlist.append(stringC)
+print(max(newlist))
+    
+         
                 
    
 
         
         
-SortNum(split(list))
