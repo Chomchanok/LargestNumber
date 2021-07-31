@@ -1,5 +1,6 @@
 import itertools  # using combinatoric iterators
 listA =  [50,1,2,9]#[10,1]#[121, 1, 2, 50]#[50,1,2,9]
+print(listA)
 perm = itertools.permutations(listA) #using permutation to arrange number in listA
 newlist = [] #create newlist to collect number after rearrangement
 for i in list(perm): 
@@ -11,10 +12,10 @@ for i in list(perm):
     #print(arrayConcat)
     for key in arrayConcat:
         stringC += key # merge number in list to string
-    print(stringC)   
+    #print(stringC)   
     for s in stringC: 
         newlist.append(stringC)
-print(max(newlist)) # finding max value in newlist and show output
+print("Max value is :",max(newlist)) # finding max value in newlist and show output
     
          
                 
